@@ -1,0 +1,24 @@
+.box1, .box2, .box3{
+	width:200px;
+	height:200px;
+	margin:10px;
+	padding:10px;
+	color:white;
+	align-items: center;
+	justify-content: center;
+}
+
+.box1 {
+	background:green;
+}
+
+.box2, .box3 {
+	background:red;
+}
+
+h2  {
+	padding:5px;
+}
+.card-body{
+	align-self: center;
+}

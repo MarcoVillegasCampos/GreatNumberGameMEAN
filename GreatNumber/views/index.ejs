@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesheets/styles.css">
+    <title>Great Number Game</title>
+</head>
+
+<body>
+    <div class="card text-center">
+        <div class="card-header">
+            Great Number Game
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">I am thinking of a number between 1 and 100</h5>
+            <p class="card-text">Take a guess</p>
+            <form action="/guess" method="post">
+                <input type="number" name="number" id="number">
+                <button class="btn-info">Submit
+                </button>
+            </form>
+        </div>
+        <% if( number !=undefined) { %>
+            <div class="card-body">
+                <% if( number==guess) { %>
+                    <div class="box1">
+                        <h2>
+                            <%= number %> was the Number!!
+                        </h2>
+                        <a name="" id="" class="btn btn-danger" href="/reset" role="button">Play again!</a>
+                    </div>
+                    <% } %>
+
+
+                <% if( number> guess) { %>
+                    <div class="box2">
+                        <h2>Too high!!! </h2>
+
+                    </div>
+                    <% } %>
+  
+    
+                <% if( number < guess) { %>
+                    <div class="box3">
+                        <h2>Too low!!! </h2>
+
+                    </div>
+                    <% } %>
+            </div>
+            <% } %>
+    </div>
+
+</body>
+
+</html>
